@@ -17,7 +17,8 @@ public final class WordCount {
         }
 // Configure Spark
         final SparkConf sparkConf = new SparkConf()
-                .setAppName("WordCount"); // Set the master to local for running it locally
+                .setAppName("WordCount")
+                .setMaster("local"); // Set the master to local for running it locally
 // Create Spark context
         final JavaSparkContext ctx = new JavaSparkContext(sparkConf);
 // Load data
